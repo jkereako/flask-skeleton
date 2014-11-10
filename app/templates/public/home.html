@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+  <!-- home.html -->
+  {% block jumbotron %}
+  <div class="jumbotron">
+    <div class="container">
+
+      <h1>It worked!</h1>
+      <p>This template is being rendered from.<code>templates/home.html</code>. If you haven't already guessed, this application uses <a href="http://getbootstrap.com" target="_blank"> Bootstrap</a>. This particular template is <a href="http://getbootstrap.com/examples/jumbotron/" target="_blank">Bootstrap's jumbotron</a>.</p>
+      <p><a class="btn btn-primary btn-lg" href="https://github.com/jkereako/flask-skeleton" target="_blank" role="button">Project on Github &raquo;</a></p>
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block content %}
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Caching</h2>
+      <p>If you make a change to the source, reload, and don't see your change, it's because Flask's cahcing mechanism, SimpleCache, is activated. The cache is volitle and will not persist between runnings. The quick solution is to restart your server.</p>
+      <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/0.10/patterns/caching/" target="_blank" role="button">Caching docs &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Second item</h2>
+      <p>Some text here</p>
+   </div>
+    <div class="col-md-4">
+      <h2>Templates</h2>
+      <p>Flask uses Jinja as its templating engine because both technologies were written by the same guy. Get familiar with it.</p>
+      <p><a class="btn btn-default" href="http://jinja.pocoo.org/docs/dev/templates/" target="_blank" role="button">Jinja docs &raquo;</a></p>
+    </div>
+  </div>
+
+  {% endblock %}
