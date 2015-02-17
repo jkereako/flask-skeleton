@@ -20,7 +20,6 @@ import re
 import logging
 from hashlib import sha224
 from datetime import date, datetime
-from dateutil.parser import parse
 from unicodedata import normalize
 from flask import request
 from app import app, cache
@@ -184,16 +183,3 @@ def current_time():
     :rtype: str
     """
     return datetime.now().strftime("%s")
-
-def timestamp_from_string(date_string):
-    """
-    Returns a UNIX timestamp for a provided date string.
-
-    This function was created with PHP's strtotime in mind. This may be
-    removed if it discovered that Python supports this natively. I'm
-    certain it does.
-
-    :returns: The current timestamp as a string
-    :rtype: str
-    """
-    return parse(date_string).strftime("%s")
